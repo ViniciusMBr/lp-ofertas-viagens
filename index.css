@@ -1,12 +1,19 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-image: url(Imagens/nova.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    color: rgb(229, 233, 233);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
 }
 
 header {
@@ -28,34 +35,70 @@ header img{
     position: absolute;
     top: 0;
     left:0;
-    
-
-
-
 }
 
 header h1 {
     color: aliceblue;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
-    flex: 70%;
+    margin:0 auto;
 
 }
 
-aside {
-    width: 80%;
-    margin: 0 auto;
-    color: rgb(229, 233, 233);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    left: 75%;
-    padding: 4%;
-    background-color: rgb(49, 48, 47);
-    opacity: 0.8;
+main {
+    display:flex;
+    flex: 1;
+
+
+}
+main article{
+     flex: 50%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     gap: 20px;
+ }
+main article p{
+    max-width: 300px;
     text-align: center;
 }
 
+main aside {
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main aside .cadastro{
+    width: 300px;
+    padding: 5px;
+    margin: 0 auto;
+    background-color: rgb(49, 48, 47);
+    opacity: 0.8;
+    color: rgb(229, 233, 233);
+    text-align: center;
+}
+aside .cadastro .apresentacao{
+
+
+}
+aside .cadastro #formulario{
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 15px;
+}
+
+#formulario label{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+
 footer {
-    background-color: gainsboro;
+    background-color: rgb(226, 222, 217);
     color: darkblue;
     text-align: center;
 
