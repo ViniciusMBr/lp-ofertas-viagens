@@ -14,6 +14,7 @@ body {
     display: flex;
     flex-direction: column;
 
+
 }
 
 header {
@@ -22,13 +23,14 @@ header {
     text-shadow: 2px 2px 10px black;
     display:flex;
     position: relative;
+    align-items: center;
+    justify-content: center;
     padding: 15px;
-
 }
 
 header img{
-    max-width: 100px;
-    max-height: 75px;
+    max-width: 6.25em;
+    max-height: 4.68em;
     width: 100%;
     height: 100%;
     z-index: 1;
@@ -37,53 +39,73 @@ header img{
     left:0;
 }
 
+@media (max-width:370px) {
+    header{
+        justify-content: space-between;
+    }
+    header img{
+    z-index: 0;
+    position: initial;
+    }
+}
+
 header h1 {
     color: aliceblue;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
-    margin:0 auto;
-
+    
 }
 
 main {
     display:flex;
     flex: 1;
+    flex-flow: wrap row;
+    gap: 1em 0;
+    padding: 1px;
 
 
 }
 main article{
-     flex: 50%;
+     flex: 1;
      display: flex;
      flex-direction: column;
      align-items: center;
      justify-content: center;
      gap: 20px;
- }
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     color:coral;
+     text-shadow: 2px 2px 4px black;
+     font-size:larger;
+     
+}
+
+article h2{
+     text-align: center;
+}
 main article p{
     max-width: 300px;
     text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 
 main aside {
-    flex: 50%;
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 main aside .cadastro{
-    width: 300px;
-    padding: 5px;
+    max-width: 31.25em;
+    padding: 20px;
     margin: 0 auto;
     background-color: rgb(49, 48, 47);
     opacity: 0.8;
     color: rgb(229, 233, 233);
     text-align: center;
 }
-aside .cadastro .apresentacao{
 
-
-}
 aside .cadastro #formulario{
     display: flex;
     flex-direction: column;
@@ -101,5 +123,5 @@ footer {
     background-color: rgb(226, 222, 217);
     color: darkblue;
     text-align: center;
-
-}
+    opacity: 0.7;
+}   
